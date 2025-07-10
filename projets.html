@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos moi</a>
+      <a href="experience.html">Expérience</a>
+      <a href="projets.html">Projets</a>
+      <a href="competences.html">Compétences</a>
+    </nav>
+  </header>
+  <main>
+    <section class="projects-section">
+      <div class="project-card project-card-modern">
+        <div class="project-card-header">
+          <div class="project-card-title-group">
+            <h2 class="project-title">Wondertech Scan <span class="project-label">(Application Mobile)</span></h2>
+          </div>
+          <div class="project-logo-circle">
+            <img src="logotech.jpg" alt="Wondertech Services Logo" class="project-img-modern" />
+            <div class="project-logo-label">Scan</div>
+          </div>
+        </div>
+        <div class="project-info">
+          <p>
+            Wondertech Scan est une application mobile que j’ai développée pour faciliter et accélérer la lecture des codes-barres, avec une fonctionnalité de gestion de stock intégrée. Cette application permet à tout utilisateur de scanner rapidement des codes-barres ou des QR codes, tout en assurant un suivi efficace des stocks. Elle se distingue par sa rapidité, sa fiabilité et sa compatibilité avec tous types de smartphones Android et iOS.<br><br>
+            <strong>C’était un véritable honneur de recevoir ce type de demande et de pouvoir développer mes compétences en programmation grâce à Flutter lors de la réalisation de ce projet.</strong>
+          </p>
+          <button class="voir-plus-btn" id="voirPlusProjetBtn">Voir plus</button>
+          <div class="project-fonctionnalites" id="fonctionnalitesProjet" style="display:none;">
+            <div class="app-screenshot-flex">
+              <img src="homeS.jpg" alt="Capture d’écran de l’accueil Wondertech-Scanner" class="app-screenshot-img-mixed" />
+              <div class="app-screenshot-desc-mixed">
+                <div class="app-screenshot-caption-mixed">Écran d’accueil de l’application Wondertech-Scanner</div>
+                Dès l’ouverture de l’application, vous accédez à un écran d’accueil moderne et intuitif, présentant quatre boutons principaux :<br><br>
+                <strong>Scanner</strong> : Permet d’ajouter un nouveau document ou d’importer un document existant à scanner.<br>
+                <strong>Stock</strong> : Accédez à la liste des documents dans lesquels les codes-barres ont été scannés.<br>
+                <strong>Paramètres</strong> : Personnalisez les réglages de l’application selon vos préférences.<br>
+                <strong>Documents Validés</strong> : Retrouvez tous les documents qui ont été validés à partir du stock.<br><br>
+                Cette interface simple et épurée facilite la navigation et l’accès rapide à toutes les fonctionnalités essentielles de Wondertech-Scanner.
+              </div>
+            </div>
+            <!-- Option screen breakdown section -->
+            <div class="app-screenshot-flex">
+              <img src="option.jpg" alt="Choisir une option Wondertech-Scanner" class="app-screenshot-img-mixed" />
+              <div class="app-screenshot-desc-mixed">
+                <div class="app-screenshot-caption-mixed">Choisir une option pour le document</div>
+                Sur cette page, l’utilisateur choisit entre deux actions principales :<br><br>
+                <strong>Importer un Document</strong> : Permet d’importer un document existant, soit depuis la page Stock, soit à partir d’un fichier externe au format XLS ou CSV.<br>
+                <strong>Créer un Nouveau Document</strong> : Permet de démarrer la création d’un nouveau document. En sélectionnant cette option, l’utilisateur est guidé vers l’étape suivante du processus.<br><br>
+                Cette étape facilite la gestion flexible des documents, que ce soit pour intégrer des données existantes ou pour en créer de nouvelles directement dans l’application.
+              </div>
+            </div>
+            <!-- Info screen breakdown section -->
+            <div class="app-screenshot-flex">
+              <img src="info.jpg" alt="Informations document Wondertech-Scanner" class="app-screenshot-img-mixed" />
+              <div class="app-screenshot-desc-mixed">
+                <div class="app-screenshot-caption-mixed">Saisie des informations du document</div>
+                Sur cet écran, l’utilisateur (ou l’agent chargé du scan) renseigne son nom et le lieu où les codes-barres sont scannés.<br><br>
+                <strong>Numéro du Document</strong> : Généré automatiquement selon la séquence des documents déjà créés (exemple : DOC-20250709-006).<br>
+                <strong>Date</strong> : Récupérée automatiquement par l’application.<br><br>
+                Cette étape garantit la traçabilité de chaque opération de scan, en associant chaque document à un agent, un lieu, un numéro unique et une date précise.
+              </div>
+            </div>
+            <!-- Scan screen breakdown section -->
+            <div class="app-screenshot-flex">
+              <img src="scan1.jpg" alt="Page de scan Wondertech-Scanner" class="app-screenshot-img-mixed" />
+              <div class="app-screenshot-desc-mixed">
+                <div class="app-screenshot-caption-mixed">Page de scan des codes-barres</div>
+                Après validation de la création du document, l’utilisateur accède au cœur de l’application : la page de scan.<br><br>
+                Lors de la première utilisation, l’application demande l’autorisation d’accéder à la caméra et au stockage du téléphone pour permettre le scan des codes-barres.<br>
+                <strong>Fonctionnalités principales :</strong><br>
+                • Scan fluide et rapide des codes-barres ou QR codes.<br>
+                • Possibilité d’activer ou désactiver le flash pour s’adapter à la luminosité.<br>
+                • Les résultats scannés s’affichent instantanément sous la zone de scan.<br><br>
+                Cette interface garantit une expérience utilisateur optimale et efficace pour la gestion des documents scannés.
+              </div>
+            </div>
+            <!-- Scan results/quantity screen breakdown section -->
+            <div class="app-screenshot-flex">
+              <img src="scan2.jpg" alt="Résultat du scan et gestion des quantités Wondertech-Scanner" class="app-screenshot-img-mixed" />
+              <div class="app-screenshot-desc-mixed">
+                <div class="app-screenshot-caption-mixed">Gestion des quantités après scan</div>
+                Sur cet écran, chaque code-barres scanné est automatiquement ajouté à la liste des résultats.<br><br>
+                • Si le même code est scanné plusieurs fois, la quantité correspondante s’incrémente automatiquement (+1 à chaque scan).<br>
+                • L’utilisateur peut également ajuster la quantité manuellement à l’aide des boutons « + » et « – », ou en cliquant sur le nombre pour saisir la quantité souhaitée.<br><br>
+                Cette fonctionnalité permet un suivi précis et rapide des stocks lors de l’inventaire ou de la gestion des entrées/sorties.
+              </div>
+            </div>
+            <!-- Manual scan/entry screen breakdown section -->
+            <div class="app-screenshot-flex">
+              <img src="scan3.jpg" alt="Saisie manuelle ou PDA Wondertech-Scanner" class="app-screenshot-img-mixed" />
+              <div class="app-screenshot-desc-mixed">
+                <div class="app-screenshot-caption-mixed">Saisie manuelle ou via PDA</div>
+                L’application offre une grande flexibilité pour la saisie des codes-barres :<br><br>
+                • L’utilisateur peut saisir manuellement un code-barres dans le champ prévu à cet effet.<br>
+                • Il est également possible d’utiliser un appareil PDA pour scanner les codes plus rapidement.<br>
+                • Un bouton « Accueil » permet de revenir facilement à la page principale à tout moment.<br><br>
+                Tous les codes scannés ou saisis sont enregistrés en temps réel dans la page Stock, sous le nom du document en cours.<br>
+                Cette diversité d’options garantit une expérience adaptée à tous les contextes d’utilisation et une sauvegarde instantanée des données.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.getElementById('voirPlusProjetBtn').onclick = function() {
+          var list = document.getElementById('fonctionnalitesProjet');
+          if (list.style.display === 'none') {
+            list.style.display = '';
+            this.textContent = 'Voir moins';
+          } else {
+            list.style.display = 'none';
+            this.textContent = 'Voir plus';
+          }
+        };
+      </script>
+    </section>
+  </main>
+  <footer class="contact-footer">
+    <div class="contact-text">Vous pouvez me contactez</div>
+    <div class="contact-icons">
+      <a href="mailto:bouaziznidhal22@gmail.com" class="icon-btn" aria-label="Gmail">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#EA4335"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" fill="#fff"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" fill="#fff"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" stroke="#EA4335" stroke-width="2"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" stroke="#EA4335" stroke-width="2"/></svg>
+      </a>
+      <a href="https://wa.me/21646298360" target="_blank" class="icon-btn" aria-label="WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#25D366"/><path d="M16 10.5A5.5 5.5 0 0 0 10.5 16c0 1.01.27 1.96.74 2.77l-1.01 2.94 3.01-1.01A5.5 5.5 0 1 0 16 10.5Zm0 9.5a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm2.12-3.12-.88-.26c-.24-.07-.41-.13-.58.13l-.25.34c-.13.18-.25.18-.46.06a3.2 3.2 0 0 1-1.5-1.5c-.12-.21-.12-.33.06-.46l.34-.25c.26-.17.2-.34.13-.58l-.26-.88c-.07-.24-.18-.21-.3-.21h-.25c-.14 0-.34.05-.52.23-.18.18-.7.68-.7 1.65 0 .97.7 1.91.8 2.05.1.14 1.37 2.18 3.34 2.18 1.97 0 2.8-1.25 2.9-1.39.1-.14.29-.2.41-.14.12.06.29.12.45.18.16.06.27.09.38-.06.11-.15.44-.43.44-.84 0-.41-.44-.63-.6-.7Z" fill="white"/></svg>
+      </a>
+      <a href="#" class="icon-btn" aria-label="LinkedIn">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#0A66C2"/><path d="M12 14h2v8h-2v-8Zm1-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm3 4h2v1.1c.28-.5 1-1.1 2.1-1.1C21.6 14 23 15.1 23 17.5V22h-2v-4c0-1-.5-1.5-1.3-1.5-.8 0-1.2.5-1.2 1.5v4h-2v-8Z" fill="white"/></svg>
+      </a>
+    </div>
+  </footer>
+  <div id="imgModal" class="modal">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <img class="modal-img" id="modalImg" src="" alt="Capture agrandie" />
+  </div>
+  <script>
+    // Modal logic for fullscreen image
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalClose = document.getElementById('modalClose');
+    document.querySelectorAll('.app-screenshot-img-mixed').forEach(img => {
+      img.onclick = function() {
+        modal.classList.add('open');
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+      };
+    });
+    modalClose.onclick = function() {
+      modal.classList.remove('open');
+      modalImg.src = '';
+    };
+    modal.onclick = function(e) {
+      if (e.target === modal) {
+        modal.classList.remove('open');
+        modalImg.src = '';
+      }
+    };
+  </script>
+</body>
+</html> 
