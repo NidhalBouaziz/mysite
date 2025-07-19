@@ -8,36 +8,36 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <header class="glass-header">
     <nav>
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">À propos moi</a>
       <a href="experience.html">Expérience</a>
-      <a href="projets.html">Projets</a>
+      <a href="projets.html" class="active">Projets</a>
       <a href="competences.html">Compétences</a>
     </nav>
   </header>
-  <main>
-    <section class="projects-section">
-      <div class="project-card project-card-modern">
+  <main class="hero-bg fade-in">
+    <section class="projects-section animated-section card-animate">
+      <div class="project-card project-card-modern card-animate">
         <div class="project-card-header">
           <div class="project-card-title-group">
-            <h2 class="project-title">Wondertech Scan <span class="project-label">(Application Mobile)</span></h2>
+            <h2 class="project-title slide-up">Wondertech Scan <span class="project-label">(Application Mobile)</span></h2>
           </div>
-          <div class="project-logo-circle">
+          <div class="project-logo-circle animated-icon">
             <img src="logotech.jpg" alt="Wondertech Services Logo" class="project-img-modern" />
             <div class="project-logo-label">Scan</div>
           </div>
         </div>
-        <div class="project-info">
+        <div class="project-info fade-in">
           <p>
             Wondertech Scan est une application mobile que j’ai développée pour faciliter et accélérer la lecture des codes-barres, avec une fonctionnalité de gestion de stock intégrée. Cette application permet à tout utilisateur de scanner rapidement des codes-barres ou des QR codes, tout en assurant un suivi efficace des stocks. Elle se distingue par sa rapidité, sa fiabilité et sa compatibilité avec tous types de smartphones Android et iOS.<br><br>
             <strong>C’était un véritable honneur de recevoir ce type de demande et de pouvoir développer mes compétences en programmation grâce à Flutter lors de la réalisation de ce projet.</strong>
           </p>
-          <button class="voir-plus-btn" id="voirPlusProjetBtn">Voir plus</button>
-          <div class="project-fonctionnalites" id="fonctionnalitesProjet" style="display:none;">
-            <div class="app-screenshot-flex">
-              <img src="homeS.jpg" alt="Capture d’écran de l’accueil Wondertech-Scanner" class="app-screenshot-img-mixed" />
+          <button class="voir-plus-btn glow-btn" id="voirPlusProjetBtn">Voir plus</button>
+          <div class="project-fonctionnalites fade-in" id="fonctionnalitesProjet" style="display:none;">
+            <div class="app-screenshot-flex card-animate">
+              <img src="homeS.jpg" alt="Capture d’écran de l’accueil Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" />
               <div class="app-screenshot-desc-mixed">
                 <div class="app-screenshot-caption-mixed">Écran d’accueil de l’application Wondertech-Scanner</div>
                 Dès l’ouverture de l’application, vous accédez à un écran d’accueil moderne et intuitif, présentant quatre boutons principaux :<br><br>
@@ -48,9 +48,8 @@
                 Cette interface simple et épurée facilite la navigation et l’accès rapide à toutes les fonctionnalités essentielles de Wondertech-Scanner.
               </div>
             </div>
-            <!-- Option screen breakdown section -->
-            <div class="app-screenshot-flex">
-              <img src="option.jpg" alt="Choisir une option Wondertech-Scanner" class="app-screenshot-img-mixed" />
+            <div class="app-screenshot-flex card-animate">
+              <img src="option.jpg" alt="Choisir une option Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" />
               <div class="app-screenshot-desc-mixed">
                 <div class="app-screenshot-caption-mixed">Choisir une option pour le document</div>
                 Sur cette page, l’utilisateur choisit entre deux actions principales :<br><br>
@@ -59,9 +58,8 @@
                 Cette étape facilite la gestion flexible des documents, que ce soit pour intégrer des données existantes ou pour en créer de nouvelles directement dans l’application.
               </div>
             </div>
-            <!-- Info screen breakdown section -->
-            <div class="app-screenshot-flex">
-              <img src="info.jpg" alt="Informations document Wondertech-Scanner" class="app-screenshot-img-mixed" />
+            <div class="app-screenshot-flex card-animate">
+              <img src="info.jpg" alt="Informations document Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" />
               <div class="app-screenshot-desc-mixed">
                 <div class="app-screenshot-caption-mixed">Saisie des informations du document</div>
                 Sur cet écran, l’utilisateur (ou l’agent chargé du scan) renseigne son nom et le lieu où les codes-barres sont scannés.<br><br>
@@ -70,23 +68,21 @@
                 Cette étape garantit la traçabilité de chaque opération de scan, en associant chaque document à un agent, un lieu, un numéro unique et une date précise.
               </div>
             </div>
-            <!-- Scan screen breakdown section -->
-            <div class="app-screenshot-flex">
-              <img src="scan1.jpg" alt="Page de scan Wondertech-Scanner" class="app-screenshot-img-mixed" />
+            <div class="app-screenshot-flex card-animate">
+              <img src="scan1.jpg" alt="Page de scan Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" />
               <div class="app-screenshot-desc-mixed">
                 <div class="app-screenshot-caption-mixed">Page de scan des codes-barres</div>
                 Après validation de la création du document, l’utilisateur accède au cœur de l’application : la page de scan.<br><br>
                 Lors de la première utilisation, l’application demande l’autorisation d’accéder à la caméra et au stockage du téléphone pour permettre le scan des codes-barres.<br>
                 <strong>Fonctionnalités principales :</strong><br>
                 • Scan fluide et rapide des codes-barres ou QR codes.<br>
-                • Possibilité d’activer ou désactiver le flash pour s’adapter à la luminosité.<br>
+                • Possibilité d’activer ou de désactiver le flash pour s’adapter à la luminosité.<br>
                 • Les résultats scannés s’affichent instantanément sous la zone de scan.<br><br>
                 Cette interface garantit une expérience utilisateur optimale et efficace pour la gestion des documents scannés.
               </div>
             </div>
-            <!-- Scan results/quantity screen breakdown section -->
-            <div class="app-screenshot-flex">
-              <img src="scan2.jpg" alt="Résultat du scan et gestion des quantités Wondertech-Scanner" class="app-screenshot-img-mixed" />
+            <div class="app-screenshot-flex card-animate">
+              <img src="scan2.jpg" alt="Résultat du scan et gestion des quantités Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" />
               <div class="app-screenshot-desc-mixed">
                 <div class="app-screenshot-caption-mixed">Gestion des quantités après scan</div>
                 Sur cet écran, chaque code-barres scanné est automatiquement ajouté à la liste des résultats.<br><br>
@@ -95,9 +91,8 @@
                 Cette fonctionnalité permet un suivi précis et rapide des stocks lors de l’inventaire ou de la gestion des entrées/sorties.
               </div>
             </div>
-            <!-- Manual scan/entry screen breakdown section -->
-            <div class="app-screenshot-flex">
-              <img src="scan3.jpg" alt="Saisie manuelle ou PDA Wondertech-Scanner" class="app-screenshot-img-mixed" />
+            <div class="app-screenshot-flex card-animate">
+              <img src="scan3.jpg" alt="Saisie manuelle ou PDA Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" />
               <div class="app-screenshot-desc-mixed">
                 <div class="app-screenshot-caption-mixed">Saisie manuelle ou via PDA</div>
                 L’application offre une grande flexibilité pour la saisie des codes-barres :<br><br>
@@ -122,19 +117,52 @@
             this.textContent = 'Voir plus';
           }
         };
+        // Intersection Observer for entrance animations
+        function animateOnView(selector) {
+          const els = document.querySelectorAll(selector);
+          const observer = new window.IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                obs.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1 });
+          els.forEach(el => observer.observe(el));
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+          animateOnView('.fade-in');
+          animateOnView('.slide-up');
+          animateOnView('.card-animate');
+        });
+        // Floating particles
+        function createParticles(n = 3) {
+          const main = document.querySelector('main');
+          for (let i = 0; i < n; i++) {
+            const p = document.createElement('div');
+            p.className = 'floating-particle';
+            p.style.width = p.style.height = (30 + Math.random() * 60) + 'px';
+            p.style.left = (Math.random() * 90) + '%';
+            p.style.top = (Math.random() * 80) + '%';
+            p.style.background = `radial-gradient(circle, #38bdf8${Math.floor(Math.random()*128+64).toString(16)} 0%, #2563eb00 100%)`;
+            p.style.animationDuration = (12 + Math.random() * 10) + 's';
+            main.appendChild(p);
+          }
+        }
+        createParticles();
       </script>
     </section>
   </main>
-  <footer class="contact-footer">
+  <footer class="contact-footer footer-gradient">
     <div class="contact-text">Vous pouvez me contactez</div>
     <div class="contact-icons">
-      <a href="mailto:bouaziznidhal22@gmail.com" class="icon-btn" aria-label="Gmail">
+      <a href="mailto:bouaziznidhal22@gmail.com" class="icon-btn animated-icon" aria-label="Gmail">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#EA4335"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" fill="#fff"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" fill="#fff"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" stroke="#EA4335" stroke-width="2"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" stroke="#EA4335" stroke-width="2"/></svg>
       </a>
-      <a href="https://wa.me/21646298360" target="_blank" class="icon-btn" aria-label="WhatsApp">
+      <a href="https://wa.me/21646298360" target="_blank" class="icon-btn animated-icon" aria-label="WhatsApp">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#25D366"/><path d="M16 10.5A5.5 5.5 0 0 0 10.5 16c0 1.01.27 1.96.74 2.77l-1.01 2.94 3.01-1.01A5.5 5.5 0 1 0 16 10.5Zm0 9.5a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm2.12-3.12-.88-.26c-.24-.07-.41-.13-.58.13l-.25.34c-.13.18-.25.18-.46.06a3.2 3.2 0 0 1-1.5-1.5c-.12-.21-.12-.33.06-.46l.34-.25c.26-.17.2-.34.13-.58l-.26-.88c-.07-.24-.18-.21-.3-.21h-.25c-.14 0-.34.05-.52.23-.18.18-.7.68-.7 1.65 0 .97.7 1.91.8 2.05.1.14 1.37 2.18 3.34 2.18 1.97 0 2.8-1.25 2.9-1.39.1-.14.29-.2.41-.14.12.06.29.12.45.18.16.06.27.09.38-.06.11-.15.44-.43.44-.84 0-.41-.44-.63-.6-.7Z" fill="white"/></svg>
       </a>
-      <a href="https://www.linkedin.com/in/bouaziz-nidhal-96b3a2374" target="_blank" class="icon-btn" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/bouaziz-nidhal-96b3a2374" target="_blank" class="icon-btn animated-icon" aria-label="LinkedIn">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#0A66C2"/><path d="M12 14h2v8h-2v-8Zm1-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm3 4h2v1.1c.28-.5 1-1.1 2.1-1.1C21.6 14 23 15.1 23 17.5V22h-2v-4c0-1-.5-1.5-1.3-1.5-.8 0-1.2.5-1.2 1.5v4h-2v-8Z" fill="white"/></svg>
       </a>
     </div>

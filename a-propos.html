@@ -8,56 +8,91 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <header class="glass-header">
     <nav>
       <a href="index.html">Accueil</a>
-      <a href="a-propos.html">À propos moi</a>
+      <a href="a-propos.html" class="active">À propos moi</a>
       <a href="experience.html">Expérience</a>
       <a href="projets.html">Projets</a>
       <a href="competences.html">Compétences</a>
-      
     </nav>
   </header>
-  <main>
-    <section class="about-section">
+  <main class="hero-bg fade-in">
+    <section class="about-section animated-section card-animate">
       <div class="about-image">
         <img src="mask.jpg" alt="Photo avec masque" />
       </div>
       <div class="about-content">
-        <h2>À propos de moi</h2>
-        <p>Dynamique et polyvalent, j’ai participé à des projets techniques variés en maintenance informatique, développement web et installation réseau.<br><br>
+        <h2 class="slide-up">À propos de moi</h2>
+        <p class="fade-in">Dynamique et polyvalent, j’ai participé à des projets techniques variés en maintenance informatique, développement web et installation réseau.<br><br>
 Curieux et motivé, j’aime les environnements collaboratifs et les défis technologiques.<br><br>
 Mon objectif : créer des solutions efficaces, accessibles et utiles pour les utilisateurs.</p>
       </div>
     </section>
-    <section class="interests-section">
-      <h2>Centre d'intérêt</h2>
+    <section class="interests-section animated-section card-animate">
+      <h2 class="slide-up">Centre d'intérêt</h2>
       <ul class="interests-list">
-        <li>
+        <li class="card-animate">
           <img src="theatre.jpg" alt="Théâtre" class="interest-img" />
           Théâtre
         </li>
-        <li>
+        <li class="card-animate">
           <img src="guitar.jpg" alt="Musique" class="interest-img" />
           Musique
         </li>
-        <li>
+        <li class="card-animate">
           <img src="dance.jpg" alt="Danse" class="interest-img" />
           Danse
         </li>
       </ul>
     </section>
+    <script>
+      // Entrance animation
+      // Intersection Observer for entrance animations
+      function animateOnView(selector) {
+        const els = document.querySelectorAll(selector);
+        const observer = new window.IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        els.forEach(el => observer.observe(el));
+      }
+      window.addEventListener('DOMContentLoaded', () => {
+        animateOnView('.fade-in');
+        animateOnView('.slide-up');
+        animateOnView('.card-animate');
+      });
+      // Floating particles
+      function createParticles(n = 3) {
+        const main = document.querySelector('main');
+        for (let i = 0; i < n; i++) {
+          const p = document.createElement('div');
+          p.className = 'floating-particle';
+          p.style.width = p.style.height = (30 + Math.random() * 60) + 'px';
+          p.style.left = (Math.random() * 90) + '%';
+          p.style.top = (Math.random() * 80) + '%';
+          p.style.background = `radial-gradient(circle, #38bdf8${Math.floor(Math.random()*128+64).toString(16)} 0%, #2563eb00 100%)`;
+          p.style.animationDuration = (12 + Math.random() * 10) + 's';
+          main.appendChild(p);
+        }
+      }
+      createParticles();
+    </script>
   </main>
-  <footer class="contact-footer">
+  <footer class="contact-footer footer-gradient">
     <div class="contact-text">Vous pouvez me contactez</div>
     <div class="contact-icons">
-      <a href="mailto:bouaziznidhal22@gmail.com" class="icon-btn" aria-label="Gmail">
+      <a href="mailto:bouaziznidhal22@gmail.com" class="icon-btn animated-icon" aria-label="Gmail">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#EA4335"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" fill="#fff"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" fill="#fff"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" stroke="#EA4335" stroke-width="2"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" stroke="#EA4335" stroke-width="2"/></svg>
       </a>
-      <a href="https://wa.me/21646298360" target="_blank" class="icon-btn" aria-label="WhatsApp">
+      <a href="https://wa.me/21646298360" target="_blank" class="icon-btn animated-icon" aria-label="WhatsApp">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#25D366"/><path d="M16 10.5A5.5 5.5 0 0 0 10.5 16c0 1.01.27 1.96.74 2.77l-1.01 2.94 3.01-1.01A5.5 5.5 0 1 0 16 10.5Zm0 9.5a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm2.12-3.12-.88-.26c-.24-.07-.41-.13-.58.13l-.25.34c-.13.18-.25.18-.46.06a3.2 3.2 0 0 1-1.5-1.5c-.12-.21-.12-.33.06-.46l.34-.25c.26-.17.2-.34.13-.58l-.26-.88c-.07-.24-.18-.21-.3-.21h-.25c-.14 0-.34.05-.52.23-.18.18-.7.68-.7 1.65 0 .97.7 1.91.8 2.05.1.14 1.37 2.18 3.34 2.18 1.97 0 2.8-1.25 2.9-1.39.1-.14.29-.2.41-.14.12.06.29.12.45.18.16.06.27.09.38-.06.11-.15.44-.43.44-.84 0-.41-.44-.63-.6-.7Z" fill="white"/></svg>
       </a>
-      <a href="https://www.linkedin.com/in/bouaziz-nidhal-96b3a2374" target="_blank" class="icon-btn" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/bouaziz-nidhal-96b3a2374" target="_blank" class="icon-btn animated-icon" aria-label="LinkedIn">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#0A66C2"/><path d="M12 14h2v8h-2v-8Zm1-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm3 4h2v1.1c.28-.5 1-1.1 2.1-1.1C21.6 14 23 15.1 23 17.5V22h-2v-4c0-1-.5-1.5-1.3-1.5-.8 0-1.2.5-1.2 1.5v4h-2v-8Z" fill="white"/></svg>
       </a>
     </div>

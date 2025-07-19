@@ -1319,3 +1319,193 @@ h1 {
     height: 20px;
   }
 } 
+
+/* === GLASSMORPHISM HEADER & NAV ANIMATION === */
+header.glass-header {
+  background: rgba(37, 99, 235, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(38, 99, 235, 0.18);
+  backdrop-filter: blur(12px);
+  border-bottom: 1.5px solid rgba(56, 189, 248, 0.13);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav {
+  position: relative;
+}
+nav a {
+  position: relative;
+  padding-bottom: 0.3em;
+}
+nav a.active::after, nav a:focus::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #38bdf8 0%, #2563eb 100%);
+  animation: nav-underline 1.2s cubic-bezier(.4,2,.6,1) infinite alternate;
+}
+@keyframes nav-underline {
+  0% { opacity: 0.7; transform: scaleX(0.7); }
+  100% { opacity: 1; transform: scaleX(1); }
+}
+nav a:not(.active):hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #38bdf8 0%, #2563eb 100%);
+  opacity: 0.5;
+}
+
+/* === HERO & SECTION BACKGROUNDS === */
+.hero-bg, .animated-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+}
+.hero-bg::before, .animated-section::before {
+  content: '';
+  position: absolute;
+  top: -120px; left: -120px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, #38bdf8 0%, #2563eb 60%, transparent 100%);
+  opacity: 0.13;
+  z-index: 0;
+  animation: float1 12s ease-in-out infinite alternate;
+}
+.hero-bg::after, .animated-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; right: -100px;
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, #64748b 0%, #38bdf8 60%, transparent 100%);
+  opacity: 0.10;
+  z-index: 0;
+  animation: float2 14s ease-in-out infinite alternate;
+}
+
+/* === ENTRANCE ANIMATIONS === */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 1.2s cubic-bezier(.4,2,.6,1) forwards;
+}
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === GLOWING & ANIMATED BUTTONS === */
+.glow-btn, .voir-plus-btn, .about-btn {
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 16px #38bdf866, 0 1.5px 6px #2563eb22;
+  border: none;
+  outline: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.glow-btn:hover, .voir-plus-btn:hover, .about-btn:hover {
+  background: linear-gradient(90deg, #38bdf8 0%, #2563eb 100%);
+  box-shadow: 0 4px 32px #38bdf8aa, 0 2px 12px #2563eb33;
+  transform: scale(1.06);
+}
+
+/* === CARD ENTRANCE ANIMATION === */
+.card-animate {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  animation: cardIn 1.1s cubic-bezier(.4,2,.6,1) forwards;
+}
+@keyframes cardIn {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* === ANIMATED ICONS === */
+.animated-icon, .icon-btn svg {
+  transition: filter 0.2s, transform 0.2s;
+}
+.animated-icon:hover, .icon-btn:hover svg {
+  filter: none;
+  box-shadow: 0 2px 8px #38bdf822;
+  transform: scale(1.06);
+}
+
+/* === FOOTER GRADIENT & FLOATING ICONS === */
+.contact-footer.footer-gradient {
+  background: linear-gradient(90deg, #e0e7ff 0%, #f8fafc 100%);
+  border-top: 2.5px solid #38bdf8;
+  box-shadow: 0 -2px 24px #2563eb11;
+  position: relative;
+  overflow: hidden;
+}
+.contact-icons .icon-btn {
+  animation: floatIcon 3.5s ease-in-out infinite alternate;
+}
+@keyframes floatIcon {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px) scale(1.08); }
+}
+
+/* === FLOATING PARTICLES === */
+.floating-particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatParticle 18s linear infinite;
+}
+@keyframes floatParticle {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-60px) scale(1.15); }
+}
+
+/* === UTILITY CLASSES === */
+.text-glow {
+  text-shadow: 0 2px 12px #38bdf8aa, 0 1.5px 6px #2563eb33;
+}
+.bg-blur {
+  backdrop-filter: blur(8px);
+} 
+
+/* === SIMPLIFIED/REDUCED EFFECTS FOR PERFORMANCE === */
+@media (max-width: 700px) {
+  header.glass-header {
+    backdrop-filter: none;
+    background: var(--primary-blue);
+    box-shadow: 0 2px 8px rgba(38, 99, 235, 0.08);
+  }
+  .competence-card, .education-card, .event-card, .project-card, .project-card-modern {
+    box-shadow: 0 2px 8px rgba(38, 99, 235, 0.04);
+    border-top: 2px solid var(--primary-blue);
+    border-bottom: 2px solid #f1f5f9;
+  }
+  .icon-btn, .glow-btn, .animated-icon, .tech-logo {
+    box-shadow: none;
+    filter: none;
+    transition: none;
+  }
+  .contact-footer.footer-gradient {
+    background: #fafbfc;
+    box-shadow: none;
+    border-top: 1px solid #e5e7eb;
+  }
+  .floating-particle {
+    display: none;
+  }
+} 
