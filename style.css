@@ -108,6 +108,8 @@ h1 {
   font-weight: 600;
   transition: background 0.2s;
   box-shadow: 0 2px 8px rgba(7, 89, 133, 0.08);
+  position: relative;
+  z-index: 10;
 }
 .about-btn:hover {
   background: var(--primary-blue);
@@ -405,6 +407,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 .carousel-btn:hover {
   background: var(--accent-blue);
@@ -454,9 +458,10 @@ h1 {
     padding: 0.7rem 0.3rem;
   }
   .carousel-btn {
-    width: 38px;
-    height: 38px;
-    font-size: 1.2rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+    z-index: 10;
   }
 }
 .contact-footer {
@@ -638,6 +643,8 @@ h1 {
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(38, 99, 235, 0.08);
   transition: background 0.2s, transform 0.2s;
+  position: relative;
+  z-index: 10;
 }
 .voir-plus-btn:hover {
   background: var(--accent-blue);
@@ -1444,6 +1451,7 @@ nav a:not(.active):hover::after {
   transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
   position: relative;
   overflow: hidden;
+  z-index: 10;
 }
 .glow-btn:hover, .voir-plus-btn:hover, .about-btn:hover {
   background: linear-gradient(90deg, #38bdf8 0%, #2563eb 100%);
@@ -1509,8 +1517,24 @@ nav a:not(.active):hover::after {
   backdrop-filter: blur(8px);
 } 
 
-/* === SIMPLIFIED/REDUCED EFFECTS FOR PERFORMANCE === */
+/* === MOBILE TOUCH FIXES === */
 @media (max-width: 700px) {
+  /* Ensure buttons are properly touchable on mobile */
+  .carousel-btn, .voir-plus-btn, .about-btn, .glow-btn, button {
+    min-height: 44px;
+    min-width: 44px;
+    position: relative;
+    z-index: 10;
+    touch-action: manipulation;
+  }
+  
+  /* Disable pointer events on animation containers to prevent click interception */
+  .animated-section::before, .animated-section::after,
+  .hero-bg::before, .hero-bg::after,
+  .floating-particle {
+    pointer-events: none;
+  }
+  
   header.glass-header {
     backdrop-filter: none;
     background: var(--primary-blue);

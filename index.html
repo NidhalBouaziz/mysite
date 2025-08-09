@@ -158,18 +158,8 @@
     </div>
   </footer>
   <script>
-    // Header hide on scroll
-    let lastScrollY = window.scrollY;
-    const header = document.querySelector('header.glass-header');
-    window.addEventListener('scroll', function() {
-      if (!header) return;
-      if (window.scrollY > lastScrollY && window.scrollY > 50) {
-        header.classList.add('hide-on-scroll');
-      } else {
-        header.classList.remove('hide-on-scroll');
-      }
-      lastScrollY = window.scrollY;
-    });
+    // Header behavior - keep header always visible for better UX
+    // Removed auto-hide functionality that was causing user frustration
   </script>
 </body>
 </html>
