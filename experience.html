@@ -3,21 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expérience - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="style.css" as="style">
+  <meta name="description" content="Expériences professionnelles de Nidhal Bouaziz — technicien de maintenance, support et projets de développement." />
+  <link rel="canonical" href="experience.html" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Expérience — Nidhal Bouaziz" />
+  <meta property="og:description" content="Historique professionnel et missions réalisées en maintenance, support et développement." />
+  <meta property="og:image" content="logotech.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <style>header, nav{visibility:visible;} .skip-link{position:absolute;left:-9999px;}</style>
+   <title>Expérience - Portfolio</title>
+  <link rel="icon" href="logotech.jpg" type="image/jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
   <header class="glass-header">
-    <nav>
+    <nav role="navigation" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="a-propos.html">À propos moi</a>
-      <a href="experience.html" class="active">Expérience</a>
+      <a href="experience.html" class="active" aria-current="page">Expérience</a>
       <a href="projets.html">Projets</a>
       <a href="competences.html">Compétences</a>
     </nav>
   </header>
-  <main class="hero-bg fade-in">
+  <main id="main-content" class="hero-bg fade-in">
     <section class="experience-section animated-section card-animate">
       <div class="experience-content card-animate">
         <div class="experience-info">
@@ -36,8 +54,8 @@
             <li>Réalisation de l’inventaire du matériel affecté aux utilisateurs sous logiciel de gestion de parc</li>
           </ul>
         </div>
-        <a href="https://wondertech-mu.vercel.app" target="_blank" class="company-logo-link card-animate">
-          <img src="logotech.jpg" alt="Wondertech Services Logo" class="company-logo animated-icon" />
+        <a href="https://wondertech-mu.vercel.app" target="_blank" rel="noopener noreferrer" class="company-logo-link card-animate">
+          <img src="logotech.jpg" alt="Wondertech Services Logo" class="company-logo animated-icon" loading="lazy" fetchpriority="high" decoding="async" />
         </a>
       </div>
     </section>
@@ -58,8 +76,8 @@
             <li>Marketing terrain et porte-à-porte</li>
           </ul>
         </div>
-        <a href="https://www.tunisietelecom.tn/particulier/" target="_blank" class="company-logo-link card-animate">
-          <img src="tt.jpg" alt="Tunisie Telecom Logo" class="company-logo animated-icon" />
+        <a href="https://www.tunisietelecom.tn/particulier/" target="_blank" rel="noopener noreferrer" class="company-logo-link card-animate">
+          <img src="tt.jpg" alt="Tunisie Telecom Logo" class="company-logo animated-icon" loading="lazy" />
         </a>
       </div>
     </section>
@@ -77,8 +95,8 @@
             <li>Développement web</li>
           </ul>
         </div>
-        <a href="https://www.facebook.com/PROXIMEDIA.INFORMATIQUE" target="_blank" class="company-logo-link card-animate">
-          <img src="proxi.jpg" alt="Proximedia Informatique Logo" class="company-logo animated-icon" />
+        <a href="https://www.facebook.com/PROXIMEDIA.INFORMATIQUE" target="_blank" rel="noopener noreferrer" class="company-logo-link card-animate">
+          <img src="proxi.jpg" alt="Proximedia Informatique Logo" class="company-logo animated-icon" loading="lazy" />
         </a>
       </div>
     </section>
@@ -98,86 +116,11 @@
             <li>Coordination avec les équipes commerciale</li>
           </ul>
         </div>
-        <a href="https://www.tunisietelecom.tn/particulier/" target="_blank" class="company-logo-link card-animate">
-          <img src="tt.jpg" alt="Tunisie Telecom Logo" class="company-logo animated-icon" />
+        <a href="https://www.tunisietelecom.tn/particulier/" target="_blank" rel="noopener noreferrer" class="company-logo-link card-animate">
+          <img src="tt.jpg" alt="Tunisie Telecom Logo" class="company-logo animated-icon" loading="lazy" />
         </a>
       </div>
     </section>
-    <script>
-      document.getElementById('voirPlusBtn').onclick = function() {
-        var list = document.getElementById('experienceList');
-        if (list.style.display === 'none') {
-          list.style.display = '';
-          this.textContent = 'Voir moins';
-        } else {
-          list.style.display = 'none';
-          this.textContent = 'Voir plus';
-        }
-      };
-      document.getElementById('voirPlusBtn2').onclick = function() {
-        var list = document.getElementById('experienceList2');
-        if (list.style.display === 'none') {
-          list.style.display = '';
-          this.textContent = 'Voir moins';
-        } else {
-          list.style.display = 'none';
-          this.textContent = 'Voir plus';
-        }
-      };
-      document.getElementById('voirPlusBtn3').onclick = function() {
-        var list = document.getElementById('experienceList3');
-        if (list.style.display === 'none') {
-          list.style.display = '';
-          this.textContent = 'Voir moins';
-        } else {
-          list.style.display = 'none';
-          this.textContent = 'Voir plus';
-        }
-      };
-      document.getElementById('voirPlusBtn4').onclick = function() {
-        var list = document.getElementById('experienceList4');
-        if (list.style.display === 'none') {
-          list.style.display = '';
-          this.textContent = 'Voir moins';
-        } else {
-          list.style.display = 'none';
-          this.textContent = 'Voir plus';
-        }
-      };
-      // Intersection Observer for entrance animations
-      function animateOnView(selector) {
-        const els = document.querySelectorAll(selector);
-        const observer = new window.IntersectionObserver((entries, obs) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('in-view');
-              obs.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1 });
-        els.forEach(el => observer.observe(el));
-      }
-      window.addEventListener('DOMContentLoaded', () => {
-        animateOnView('.fade-in');
-        animateOnView('.slide-up');
-        animateOnView('.card-animate');
-      });
-      // Floating particles
-      function createParticles(n = 3) {
-        const main = document.querySelector('main');
-        for (let i = 0; i < n; i++) {
-          const p = document.createElement('div');
-          p.className = 'floating-particle';
-          p.style.width = p.style.height = (30 + Math.random() * 60) + 'px';
-          p.style.left = (Math.random() * 90) + '%';
-          p.style.top = (Math.random() * 80) + '%';
-          p.style.background = `radial-gradient(circle, #38bdf8${Math.floor(Math.random()*128+64).toString(16)} 0%, #2563eb00 100%)`;
-          p.style.animationDuration = (12 + Math.random() * 10) + 's';
-          main.appendChild(p);
-        }
-      }
-      createParticles();
-    </script>
   </main>
   <footer class="contact-footer footer-gradient">
     <div class="contact-text">Vous pouvez me contactez</div>
@@ -185,27 +128,14 @@
       <a href="mailto:bouaziznidhal22@gmail.com" class="icon-btn animated-icon" aria-label="Gmail">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#EA4335"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" fill="#fff"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" fill="#fff"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" stroke="#EA4335" stroke-width="2"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" stroke="#EA4335" stroke-width="2"/></svg>
       </a>
-      <a href="https://wa.me/21646298360" target="_blank" class="icon-btn animated-icon" aria-label="WhatsApp">
+      <a href="https://wa.me/21646298360" target="_blank" rel="noopener noreferrer" class="icon-btn animated-icon" aria-label="WhatsApp">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#25D366"/><path d="M16 10.5A5.5 5.5 0 0 0 10.5 16c0 1.01.27 1.96.74 2.77l-1.01 2.94 3.01-1.01A5.5 5.5 0 1 0 16 10.5Zm0 9.5a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm2.12-3.12-.88-.26c-.24-.07-.41-.13-.58.13l-.25.34c-.13.18-.25.18-.46.06a3.2 3.2 0 0 1-1.5-1.5c-.12-.21-.12-.33.06-.46l.34-.25c.26-.17.2-.34.13-.58l-.26-.88c-.07-.24-.18-.21-.3-.21h-.25c-.14 0-.34.05-.52.23-.18.18-.7.68-.7 1.65 0 .97.7 1.91.8 2.05.1.14 1.37 2.18 3.34 2.18 1.97 0 2.8-1.25 2.9-1.39.1-.14.29-.2.41-.14.12.06.29.12.45.18.16.06.27.09.38-.06.11-.15.44-.43.44-.84 0-.41-.44-.63-.6-.7Z" fill="white"/></svg>
       </a>
-      <a href="https://www.linkedin.com/in/nidhal-bouaziz-67460b377/" target="_blank" class="icon-btn animated-icon" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/nidhal-bouaziz-67460b377/" target="_blank" rel="noopener noreferrer" class="icon-btn animated-icon" aria-label="LinkedIn">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#0A66C2"/><path d="M12 14h2v8h-2v-8Zm1-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm3 4h2v1.1c.28-.5 1-1.1 2.1-1.1C21.6 14 23 15.1 23 17.5V22h-2v-4c0-1-.5-1.5-1.3-1.5-.8 0-1.2.5-1.2 1.5v4h-2v-8Z" fill="white"/></svg>
       </a>
     </div>
   </footer>
-  <script>
-    // Header hide on scroll
-    let lastScrollY = window.scrollY;
-    const header = document.querySelector('header.glass-header');
-    window.addEventListener('scroll', function() {
-      if (!header) return;
-      if (window.scrollY > lastScrollY && window.scrollY > 50) {
-        header.classList.add('hide-on-scroll');
-      } else {
-        header.classList.remove('hide-on-scroll');
-      }
-      lastScrollY = window.scrollY;
-    });
-  </script>
-</body>
-</html>
+  <script src="site.js" defer></script>
+ </body>
+ </html>

@@ -3,27 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="style.css" as="style">
+  <meta name="description" content="Portfolio de Nidhal Bouaziz — Technicien en maintenance informatique, développeur web et mobile, et formateur. Support technique, maintenance, déploiement et développement d'applications." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="index.html" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nidhal Bouaziz — Portfolio" />
+  <meta property="og:description" content="Technicien en maintenance informatique et développeur web/mobile. Découvrez mes projets, compétences et expériences." />
+  <meta property="og:image" content="homeS.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nidhal Bouaziz — Portfolio" />
+  <meta name="twitter:description" content="Technicien en maintenance informatique et développeur web/mobile. Découvrez mes projets, compétences et expériences." />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <style>/* critical: keep nav readable while CSS loads */ header, nav{visibility:visible;} .skip-link{position:absolute;left:-9999px;}</style>
+   <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nidhal Bouaziz",
+    "url": "index.html",
+    "email": "mailto:bouaziznidhal22@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/nidhal-bouaziz-67460b377/"
+    ]
+  }
+  </script>
+   <title>Accueil - Portfolio</title>
+   <link rel="icon" href="logotech.jpg" type="image/jpeg">
+   <link rel="preload" as="image" href="me.jpg">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
   <header class="glass-header">
-    <nav>
-      <a href="index.html" class="active">Accueil</a>
+    <nav role="navigation" aria-label="Navigation principale">
+      <a href="index.html" class="active" aria-current="page">Accueil</a>
       <a href="a-propos.html">À propos moi</a>
       <a href="experience.html">Expérience</a>
       <a href="projets.html">Projets</a>
       <a href="competences.html">Compétences</a>
     </nav>
   </header>
-  <main>
+  <main id="main-content">
     <div class="container hero-bg fade-in slide-up">
       <h1 class="text-glow">Bienvenue sur mon portfolio</h1>
     </div>
     <section class="about-section animated-section card-animate">
       <div class="about-image">
-        <img src="me.jpg" alt="Photo en costume" />
+        <img src="me.jpg" alt="Photo en costume" fetchpriority="high" decoding="async" loading="eager" />
       </div>
       <div class="about-content">
         <h2 class="slide-up">C'est moi</h2>
@@ -34,20 +69,20 @@
     <section class="domaines-section animated-section card-animate">
       <h2 class="slide-up">Domaines professionnels où je peux contribuer efficacement</h2>
       <ul class="domaines-list">
-        <li class="card-animate"><img src="support.jpg" alt="Support technique" /><span>Support technique et assistance utilisateurs</span></li>
-        <li class="card-animate"><img src="maintenance.jpg" alt="Maintenance informatique" /><span>Maintenance et dépannage informatique</span></li>
-        <li class="card-animate"><img src="admin.png" alt="Administration systèmes et réseaux" /><span>Administration systèmes et réseaux</span></li>
-        <li class="card-animate"><img src="installation.jpg" alt="Installation et configuration de matériel" /><span>Installation et configuration de matériel</span></li>
-        <li class="card-animate"><img src="dev.jpg" alt="Développement web et mobile" /><span>Développement web et mobile</span></li>
-        <li class="card-animate"><img src="sciences.jpg" alt="Sciences informatiques" /><span>Sciences informatiques</span></li>
+        <li class="card-animate"><img src="support.jpg" alt="Support technique" loading="lazy" /><span>Support technique et assistance utilisateurs</span></li>
+        <li class="card-animate"><img src="maintenance.jpg" alt="Maintenance informatique" loading="lazy" /><span>Maintenance et dépannage informatique</span></li>
+        <li class="card-animate"><img src="admin.png" alt="Administration systèmes et réseaux" loading="lazy" /><span>Administration systèmes et réseaux</span></li>
+        <li class="card-animate"><img src="installation.jpg" alt="Installation et configuration de matériel" loading="lazy" /><span>Installation et configuration de matériel</span></li>
+        <li class="card-animate"><img src="dev.jpg" alt="Développement web et mobile" loading="lazy" /><span>Développement web et mobile</span></li>
+        <li class="card-animate"><img src="sciences.jpg" alt="Sciences informatiques" loading="lazy" /><span>Sciences informatiques</span></li>
       </ul>
     </section>
     <section class="education-section animated-section card-animate">
       <h2 class="slide-up">L'éducation que j'ai dispensée</h2>
       <div class="education-cards">
         <div class="education-card card-animate">
-          <a href="https://www.facebook.com/LyceeDeGarconsSfax?locale=fr_FR" target="_blank">
-            <img src="garcon.jpg" alt="Lycée Garçon SFAX" class="education-img" />
+          <a href="https://www.facebook.com/LyceeDeGarconsSfax?locale=fr_FR" target="_blank" rel="noopener noreferrer">
+            <img src="garcon.jpg" alt="Lycée Garçon SFAX" class="education-img" loading="lazy" />
           </a>
           <div class="education-info">
             <div class="education-bac"><span class="education-bac-label">BAC</span> - 2020</div>
@@ -56,8 +91,8 @@
           </div>
         </div>
         <div class="education-card card-animate">
-          <a href="https://www.facebook.com/isim.sfax.rnu.tn/photos?locale=fr_FR" target="_blank">
-            <img src="isims.jpg" alt="Institut Supérieur d'Informatique et de Multimédia de Sfax" class="education-img" />
+          <a href="https://www.facebook.com/isim.sfax.rnu.tn/photos?locale=fr_FR" target="_blank" rel="noopener noreferrer">
+            <img src="isims.jpg" alt="Institut Supérieur d'Informatique et de Multimédia de Sfax" class="education-img" loading="lazy" />
           </a>
           <div class="education-info">
             <div class="education-bac"><span class="education-bac-label">LICENCE</span> - 2023</div>
@@ -72,19 +107,19 @@
       <div class="events-carousel">
         <button class="carousel-btn glow-btn" id="prevEvent">&#8592;</button>
         <div class="event-card-carousel card-animate">
-          <img src="sento.jpg" alt="Sento-Kaishi" class="event-img" />
+          <img src="sento.jpg" alt="Sento-Kaishi" class="event-img" loading="lazy" />
           <div class="event-name">Sento-Kaishi</div>
         </div>
         <div class="event-card-carousel card-animate" style="display:none;">
-          <img src="area.jpg" alt="AREA" class="event-img" />
+          <img src="area.jpg" alt="AREA" class="event-img" loading="lazy" />
           <div class="event-name">AREA</div>
         </div>
         <div class="event-card-carousel card-animate" style="display:none;">
-          <img src="agent.jpg" alt="Agent 001" class="event-img" />
+          <img src="agent.jpg" alt="Agent 001" class="event-img" loading="lazy" />
           <div class="event-name">Agent 001</div>
         </div>
         <div class="event-card-carousel card-animate" style="display:none;">
-          <img src="agent1.jpg" alt="Agent 001" class="event-img" />
+          <img src="agent1.jpg" alt="Agent 001" class="event-img" loading="lazy" />
           <div class="event-name">Agent 001</div>
         </div>
         <button class="carousel-btn glow-btn" id="nextEvent">&#8594;</button>
@@ -149,27 +184,14 @@
       <a href="mailto:bouaziznidhal22@gmail.com" class="icon-btn animated-icon" aria-label="Gmail">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#EA4335"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" fill="#fff"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" fill="#fff"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" stroke="#EA4335" stroke-width="2"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" stroke="#EA4335" stroke-width="2"/></svg>
       </a>
-      <a href="https://wa.me/21646298360" target="_blank" class="icon-btn animated-icon" aria-label="WhatsApp">
+      <a href="https://wa.me/21646298360" target="_blank" rel="noopener noreferrer" class="icon-btn animated-icon" aria-label="WhatsApp">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#25D366"/><path d="M16 10.5A5.5 5.5 0 0 0 10.5 16c0 1.01.27 1.96.74 2.77l-1.01 2.94 3.01-1.01A5.5 5.5 0 1 0 16 10.5Zm0 9.5a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm2.12-3.12-.88-.26c-.24-.07-.41-.13-.58.13l-.25.34c-.13.18-.25.18-.46.06a3.2 3.2 0 0 1-1.5-1.5c-.12-.21-.12-.33.06-.46l.34-.25c.26-.17.2-.34.13-.58l-.26-.88c-.07-.24-.18-.21-.3-.21h-.25c-.14 0-.34.05-.52.23-.18.18-.7.68-.7 1.65 0 .97.7 1.91.8 2.05.1.14 1.37 2.18 3.34 2.18 1.97 0 2.8-1.25 2.9-1.39.1-.14.29-.2.41-.14.12.06.29.12.45.18.16.06.27.09.38-.06.11-.15.44-.43.44-.84 0-.41-.44-.63-.6-.7Z" fill="white"/></svg>
       </a>
-      <a href="https://www.linkedin.com/in/nidhal-bouaziz-67460b377/" target="_blank" class="icon-btn animated-icon" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/nidhal-bouaziz-67460b377/" target="_blank" rel="noopener noreferrer" class="icon-btn animated-icon" aria-label="LinkedIn">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#0A66C2"/><path d="M12 14h2v8h-2v-8Zm1-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm3 4h2v1.1c.28-.5 1-1.1 2.1-1.1C21.6 14 23 15.1 23 17.5V22h-2v-4c0-1-.5-1.5-1.3-1.5-.8 0-1.2.5-1.2 1.5v4h-2v-8Z" fill="white"/></svg>
       </a>
     </div>
   </footer>
-  <script>
-    // Header hide on scroll
-    let lastScrollY = window.scrollY;
-    const header = document.querySelector('header.glass-header');
-    window.addEventListener('scroll', function() {
-      if (!header) return;
-      if (window.scrollY > lastScrollY && window.scrollY > 50) {
-        header.classList.add('hide-on-scroll');
-      } else {
-        header.classList.remove('hide-on-scroll');
-      }
-      lastScrollY = window.scrollY;
-    });
-  </script>
-</body>
-</html>
+  <script src="site.js" defer></script>
+ </body>
+ </html>
