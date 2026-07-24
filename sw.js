@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v6';
 const CACHE_NAME = `site-cache-${CACHE_VERSION}`;
 const CORE_ASSETS = [
   './',
@@ -10,6 +10,7 @@ const CORE_ASSETS = [
   './style.css',
   './site.js',
   './manifest.json',
+  './me.jpg',
   './homeS.jpg'
 ];
 

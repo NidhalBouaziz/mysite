@@ -1,23 +1,61 @@
-Optimizations and files added
+# Nidhal Bouaziz — Portfolio
 
-What I changed:
-- Added meta description, OG/Twitter meta and canonical links for each HTML page.
-- Added JSON-LD person data in `index.html`.
-- Added a skip link, nav accessibility attributes and `id="main-content"` for all pages.
-- Added preload/preconnect tags for Google Fonts and CSS.
-- Implemented lazy-loading for images (`loading="lazy"`).
-- Added `site.js` for header hide-on-scroll and mobile hamburger menu.
-- Added CSS for skip link and mobile menu.
-- Added `sitemap.xml` and `robots.txt`.
+A fast, dependency-free personal portfolio (static HTML/CSS/JS) for Nidhal Bouaziz —
+IT support technician, web & mobile developer, and Cisco-certified Ethical Hacker.
 
-Next recommended steps:
-1. Compress and convert images to WebP for better performance.
-2. Run Lighthouse (Chrome DevTools) and follow suggestions for LCP/CLS.
-3. Add structured data for projects if you want project cards in search results.
-4. Serve files via HTTPS and set proper caching headers on your server.
+**Live:** https://nidhalbouaziz.github.io/mysite/
 
-How to test locally:
-- Open `index.html` in your browser and resize to mobile width to test the hamburger and header hide on scroll.
-- Validate structured data using Google Rich Results test.
+## Design
 
-If you want, I can convert images, add project JSON-LD, and run a local Lighthouse audit and provide a report.
+- **Dark-first, aurora-lit theme** with an interactive constellation background (canvas),
+  glassmorphism surfaces and glow accents.
+- **Light / dark toggle** — the choice is saved in `localStorage` and applied before paint
+  (no flash of the wrong theme).
+- **Motion with respect** — scroll-reveal, animated counters, language bars, a typing hero
+  and a project-card pointer glow, all disabled under `prefers-reduced-motion`.
+- **Fully responsive** with an accessible mobile menu, skip link, focus states and ARIA labels.
+- **PWA** — installable, offline-capable via a service worker (`sw.js`) + `manifest.json`.
+
+## Pages
+
+| File | Content |
+| --- | --- |
+| `index.html` | Hero, animated stats, featured projects, certifications preview, education, events |
+| `a-propos.html` | Bio, language proficiency, associative life (Enactus, Touche d'Art), interests |
+| `experience.html` | Vertical timeline of 4 professional experiences (expandable) |
+| `projets.html` | Filterable gallery of 15+ real projects + Wondertech Scan case study |
+| `competences.html` | Skills grid + certifications showcase (Cisco Ethical Hacker, etc.) |
+
+## Structure
+
+```
+style.css   → design system (tokens, components, responsive, reduced-motion)
+site.js     → theme, background/constellation, reveals, counters, roles, carousel, filters
+sw.js       → offline cache (bump CACHE_VERSION when core assets change)
+manifest.json, sitemap.xml, robots.txt
+icons/      → tech-stack SVG logos
+Nidhal_Bouaziz_CV.pdf → downloadable CV
+```
+
+The animated background, theme toggle, back-to-top button and scroll-progress bar are
+injected by `site.js`, so every page stays lean and consistent.
+
+## Local preview
+
+Any static server works, e.g.:
+
+```bash
+npx serve .
+# or
+python -m http.server 8000
+```
+
+Then open http://localhost:8000. (Opening `index.html` directly works too, but the service
+worker only registers over http/https.)
+
+## Maintenance notes
+
+- Update the CV by replacing `Nidhal_Bouaziz_CV.pdf`.
+- When you change `style.css`, `site.js` or a core page, bump `CACHE_VERSION` in `sw.js`
+  so returning visitors get the new version.
+- Contact email and links live in the footer of each page and in the hero of `index.html`.

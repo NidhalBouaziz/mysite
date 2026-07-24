@@ -3,138 +3,311 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>(function(){document.documentElement.classList.add('js-enabled');try{var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="style.css" as="style">
-  <meta name="description" content="Projets réalisés par Nidhal Bouaziz — applications mobiles, sites web et outils de gestion." />
+  <meta name="description" content="Projets de Nidhal Bouaziz — applications mobiles Flutter (FieldPilot, HeartBeat, WonderTech Scan), plateformes full-stack (StayPilot, WonderTech Intervention), sites Next.js et design." />
   <link rel="canonical" href="projets.html" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Projets — Nidhal Bouaziz" />
-  <meta property="og:description" content="Portfolio de projets : applications mobiles, sites web et solutions sur-mesure." />
-  <meta property="og:image" content="homeS.jpg" />
+  <meta property="og:description" content="15+ projets : applications mobiles, plateformes full-stack, sites web et design." />
+  <meta property="og:url" content="https://nidhalbouaziz.github.io/mysite/projets.html" />
+  <meta property="og:image" content="https://nidhalbouaziz.github.io/mysite/homeS.jpg" />
+  <meta name="twitter:image" content="https://nidhalbouaziz.github.io/mysite/homeS.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#2563eb" />
+  <meta name="theme-color" content="#060915" />
   <link rel="manifest" href="manifest.json">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <style>header, nav{visibility:visible;} .skip-link{position:absolute;left:-9999px;}</style>
-   <title>Projets - Portfolio</title>
-  <link rel="icon" href="logotech.jpg" type="image/jpeg">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Wondertech Scan",
-    "operatingSystem": "ANDROID, iOS",
-    "applicationCategory": "BusinessApplication",
-    "description": "Application mobile pour le scan rapide de codes-barres et gestion de stock, développée avec Flutter.",
-    "url": "projets.html#wondertech-scan",
-    "image": "homeS.jpg",
-    "author": {
-      "@type": "Person",
-      "name": "Nidhal Bouaziz"
-    }
+    "@type": "CollectionPage",
+    "name": "Projets — Nidhal Bouaziz",
+    "about": "Portfolio de projets en développement mobile, web et full-stack",
+    "author": { "@type": "Person", "name": "Nidhal Bouaziz" }
   }
   </script>
+  <title>Projets — Nidhal Bouaziz</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Aller au contenu</a>
   <header class="glass-header">
-    <nav role="navigation" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="a-propos.html">À propos de moi</a>
-      <a href="experience.html">Expérience</a>
-      <a href="projets.html" class="active" aria-current="page">Projets</a>
-      <a href="competences.html">Compétences</a>
-    </nav>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Nidhal Bouaziz — accueil">
+        <span class="brand-mark">NB</span>
+        <span class="brand-label">Nidhal <span class="brand-sub">Bouaziz</span></span>
+      </a>
+      <nav role="navigation" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="experience.html">Expérience</a>
+        <a href="projets.html" class="active" aria-current="page">Projets</a>
+        <a href="competences.html">Compétences</a>
+      </nav>
+      <div class="nav-tools">
+        <button class="theme-toggle" type="button" aria-label="Changer de thème" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="hamburger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
   </header>
-  <main id="main-content" class="hero-bg fade-in">
-    <section class="projects-section animated-section card-animate">
-      <div class="project-card project-card-modern card-animate">
-        <div class="project-card-header">
-          <div class="project-card-title-group">
-            <h2 class="project-title slide-up">Wondertech Scan <span class="project-label">(Application Mobile)</span></h2>
+
+  <main id="main-content">
+    <section class="projects-section">
+      <div class="section-head reveal">
+        <span class="eyebrow">Réalisations</span>
+        <h1>Mes <span class="grad-text">projets</span></h1>
+        <p>Des applications mobiles Flutter aux plateformes full-stack et sites Next.js — une sélection de mes projets réels, du prototype à la production.</p>
+      </div>
+
+      <div class="project-filters reveal" role="group" aria-label="Filtrer les projets">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">Tous</button>
+        <button class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile</button>
+        <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+        <button class="filter-btn" data-filter="fullstack" aria-pressed="false">Full-stack</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- WonderTech Scan -->
+        <article class="project-tile reveal" data-cat="mobile">
+          <span class="pt-badge flagship">Flagship</span>
+          <div class="pt-cover" style="--c1:#2563eb;--c2:#22d3ee;">
+            <span class="pt-cover-tag">Mobile</span>
+            <span class="pt-cover-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 6V18M16 6V18M4 10h4M4 14h4M16 10h4M16 14h4"/></svg></span>
           </div>
-          <div class="project-logo-circle animated-icon">
-            <img src="logotech.jpg" alt="Wondertech Services Logo" class="project-img-modern" loading="lazy" fetchpriority="high" decoding="async" />
+          <h3>WonderTech Scan</h3>
+          <span class="pt-tag-role">Scanner d'inventaire · Flutter</span>
+          <p>Application de scan de codes-barres et QR avec gestion de stock, import/export Excel et suivi des documents validés. Prête pour le Play Store.</p>
+          <div class="pt-stack"><span class="chip">Flutter</span><span class="chip">Firebase</span><span class="chip">Barcode/QR</span><span class="chip">Excel</span></div>
+          <div class="pt-links"><a class="pt-link" href="#wondertech-scan">Voir l'étude de cas
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </article>
+
+        <!-- FieldPilot -->
+        <article class="project-tile reveal" data-cat="mobile">
+          <div class="pt-cover" style="--c1:#0ea5e9;--c2:#6366f1;">
+            <span class="pt-cover-tag">Mobile</span>
+            <span class="pt-cover-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          </div>
+          <h3>FieldPilot</h3>
+          <span class="pt-tag-role">CRM terrain offline-first</span>
+          <p>CRM pour délégués médicaux : gestion des clients et visites, carte Google Maps, scanner, analytics, rappels et export. Architecture feature-first et thèmes Material 3.</p>
+          <div class="pt-stack"><span class="chip">Flutter</span><span class="chip">Riverpod</span><span class="chip">GoRouter</span><span class="chip">Supabase</span><span class="chip">Google Maps</span></div>
+        </article>
+
+        <!-- HeartBeat -->
+        <article class="project-tile reveal" data-cat="mobile">
+          <div class="pt-cover" style="--c1:#ec4899;--c2:#8b5cf6;">
+            <span class="pt-cover-tag">Mobile</span>
+            <span class="pt-cover-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8Z"/></svg></span>
+          </div>
+          <h3>HeartBeat</h3>
+          <span class="pt-tag-role">« Un tap. Un battement. Une personne. »</span>
+          <p>App émotionnelle privée : envoie un battement de cœur à ton partenaire connecté. Livraison push FCM en arrière-plan, invitations par QR, détection double-cœur et statistiques.</p>
+          <div class="pt-stack"><span class="chip">Flutter</span><span class="chip">Supabase Realtime</span><span class="chip">FCM</span><span class="chip">Hive</span></div>
+        </article>
+
+        <!-- WonderTech Intervention Platform -->
+        <article class="project-tile reveal" data-cat="fullstack">
+          <div class="pt-cover" style="--c1:#6366f1;--c2:#22d3ee;">
+            <span class="pt-cover-tag">Full-stack</span>
+            <span class="pt-cover-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg></span>
+          </div>
+          <h3>WonderTech Intervention Platform</h3>
+          <span class="pt-tag-role">Gestion d'interventions techniques</span>
+          <p>Solution full-stack : API Node/Express en TypeScript (Prisma, BullMQ) + app Flutter offline-first. Authentification technicien, workflows d'intervention, exports PDF, notifications email et synchronisation.</p>
+          <div class="pt-stack"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Prisma</span><span class="chip">BullMQ</span><span class="chip">Flutter</span><span class="chip">Drift</span></div>
+        </article>
+
+        <!-- Help-Desk App -->
+        <article class="project-tile reveal" data-cat="mobile fullstack">
+          <div class="pt-cover" style="--c1:#14b8a6;--c2:#22d3ee;">
+            <span class="pt-cover-tag">Full-stack</span>
+            <span class="pt-cover-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15a4 4 0 0 1 0-8 6 6 0 0 1 16 0 4 4 0 0 1 0 8"/><path d="M20 15a4 4 0 0 1-4 4h-3"/><circle cx="12" cy="20" r="1"/></svg></span>
+          </div>
+          <h3>Help-Desk &amp; Maintenance</h3>
+          <span class="pt-tag-role">Ticketing multi-rôles</span>
+          <p>Application d'assistance mobile-first avec rôles client, technicien et admin. Flux de statuts New → Assigné → En cours → Terminé, chat temps réel et pièces jointes photo.</p>
+          <div class="pt-stack"><span class="chip">Flutter</span><span class="chip">Supabase Auth</span><span class="chip">PostgreSQL</span><span class="chip">Realtime</span><span class="chip">Storage</span></div>
+        </article>
+
+        <!-- WonderTech Technicien Manager -->
+        <article class="project-tile reveal" data-cat="mobile">
+          <div class="pt-cover" style="--c1:#3b82f6;--c2:#8b5cf6;">
+            <span class="pt-cover-tag">Mobile</span>
+            <span class="pt-cover-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20a5 5 0 0 0-10 0"/><circle cx="12" cy="9" r="4"/><path d="M20 19a4 4 0 0 0-3-3.8M7 15.2A4 4 0 0 0 4 19"/></svg></span>
+          </div>
+          <h3>WonderTech Technicien Manager</h3>
+          <span class="pt-tag-role">Coordination d'équipes terrain</span>
+          <p>App Flutter Material 3 reliant développeurs, admins, techniciens et clients. Backend Supabase (Auth, Postgres, RLS, Realtime, Storage) avec accès par rôle.</p>
+          <div class="pt-stack"><span class="chip">Flutter</span><span class="chip">Material 3</span><span class="chip">Supabase</span><span class="chip">RLS</span></div>
+        </article>
+
+        <!-- StayPilot -->
+        <article class="project-tile reveal" data-cat="web fullstack">
+          <div class="pt-cover" style="--c1:#0b1022;--c2:#1a2340;">
+            <span class="pt-cover-tag">SaaS</span>
+            <img class="pt-cover-img contain" src="projects/staypilot.jpg" alt="Logo StayPilot — Luxury Guesthouse Suite" loading="lazy" />
+          </div>
+          <h3>StayPilot — AI Guesthouse OS</h3>
+          <span class="pt-tag-role">SaaS maisons d'hôtes · Next.js</span>
+          <p>Dashboard full-stack pour maisons d'hôtes : réservations, calendrier, paiements, KPIs d'occupation, concierge IA (FR/EN/AR) et synchronisation Gmail des réservations.</p>
+          <div class="pt-stack"><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Tailwind v4</span><span class="chip">Supabase</span><span class="chip">NextAuth</span></div>
+        </article>
+
+        <!-- Reservation -->
+        <article class="project-tile reveal" data-cat="mobile fullstack">
+          <div class="pt-cover" style="--c1:#f59e0b;--c2:#ec4899;">
+            <span class="pt-cover-tag">Mobile</span>
+            <img class="pt-cover-img contain" src="projects/resa.jpg" alt="Logo Resa Pro" loading="lazy" />
+          </div>
+          <h3>Resa Pro</h3>
+          <span class="pt-tag-role">Plateforme de réservation</span>
+          <p>Application de réservation construite avec Flutter et Supabase — authentification, base de données et gestion des créneaux, avec documentation d'architecture complète.</p>
+          <div class="pt-stack"><span class="chip">Flutter</span><span class="chip">Supabase</span><span class="chip">PostgreSQL</span></div>
+        </article>
+
+        <!-- WonderTech Website -->
+        <article class="project-tile reveal" data-cat="web">
+          <span class="pt-badge live">Live</span>
+          <div class="pt-cover" style="--c1:#3b82f6;--c2:#8b5cf6;">
+            <span class="pt-cover-tag">Web</span>
+            <span class="pt-cover-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8.5h18M6.4 6.3h.01M8.8 6.3h.01"/></svg></span>
+          </div>
+          <h3>WonderTech — Site vitrine</h3>
+          <span class="pt-tag-role">Site services IT professionnel</span>
+          <p>Site vitrine multi-pages pour une marque de services informatiques (services, produits, infrastructure, solutions métier), avec un système d'animations à révélation progressive fait main.</p>
+          <div class="pt-stack"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">PHP</span></div>
+          <div class="pt-links"><a class="pt-link" href="https://wondertech-mu.vercel.app" target="_blank" rel="noopener noreferrer">Visiter le site
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+        </article>
+
+        <!-- Mr. Coffee -->
+        <article class="project-tile reveal" data-cat="web">
+          <div class="pt-cover" style="--c1:#78350f;--c2:#b45309;">
+            <span class="pt-cover-tag">Web</span>
+            <img class="pt-cover-img" src="projects/coffee.jpg" alt="Cappuccino avec latte art — site Mr. Coffee" loading="lazy" />
+          </div>
+          <h3>Mr. Coffee</h3>
+          <span class="pt-tag-role">Site vitrine animé · Next.js</span>
+          <p>Site marketing pour un café/torréfacteur avec animations Framer Motion, carrousel Embla et formulaires validés (React Hook Form + Zod). Design chaleureux et immersif.</p>
+          <div class="pt-stack"><span class="chip">Next.js 15</span><span class="chip">React 19</span><span class="chip">Framer Motion</span><span class="chip">Zod</span></div>
+        </article>
+
+        <!-- ERP -->
+        <article class="project-tile reveal" data-cat="fullstack">
+          <div class="pt-cover" style="--c1:#475569;--c2:#3b82f6;">
+            <span class="pt-cover-tag">Full-stack</span>
+            <span class="pt-cover-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>
+          </div>
+          <h3>ERP — Client / Serveur</h3>
+          <span class="pt-tag-role">Gestion d'entreprise · .NET</span>
+          <p>Système ERP en architecture client-serveur : client de bureau C#/XAML (MVVM) et serveur ASP.NET avec authentification, contrôleurs, DTOs et couche de données.</p>
+          <div class="pt-stack"><span class="chip">C#</span><span class="chip">.NET</span><span class="chip">XAML</span><span class="chip">ASP.NET</span><span class="chip">MVVM</span></div>
+        </article>
+
+        <!-- Love Quest -->
+        <article class="project-tile reveal" data-cat="mobile">
+          <div class="pt-cover" style="--c1:#f43f5e;--c2:#ec4899;">
+            <span class="pt-cover-tag">Mobile · WIP</span>
+            <span class="pt-cover-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z"/><path d="m9 10 2 2 4-4"/></svg></span>
+          </div>
+          <h3>Love Quest</h3>
+          <span class="pt-tag-role">App Flutter · en développement</span>
+          <p>Projet Flutter multiplateforme en cours de conception — une expérience ludique et interactive pensée mobile-first.</p>
+          <div class="pt-stack"><span class="chip">Flutter</span><span class="chip">Dart</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WONDERTECH SCAN CASE STUDY -->
+    <section class="projects-section" id="wondertech-scan" style="margin-top:var(--space-section);">
+      <div class="section-head reveal">
+        <span class="eyebrow">Étude de cas</span>
+        <h2>WonderTech Scan <span class="grad-text">en détail</span></h2>
+      </div>
+      <div class="project-card-modern reveal">
+        <div class="project-card-header">
+          <div>
+            <h2 class="project-title">WonderTech Scan <span class="project-label">(Application Mobile)</span></h2>
+          </div>
+          <div class="project-logo-circle">
+            <img src="logotech.jpg" alt="WonderTech Services" class="project-img-modern" loading="lazy" />
             <div class="project-logo-label">Scan</div>
           </div>
         </div>
-        <div class="project-info fade-in">
+        <div class="project-info">
           <p>
-            Wondertech Scan est une application mobile que j’ai développée pour faciliter et accélérer la lecture des codes-barres, avec une fonctionnalité de gestion de stock intégrée. Cette application permet à tout utilisateur de scanner rapidement des codes-barres ou des QR codes, tout en assurant un suivi efficace des stocks. Elle se distingue par sa rapidité, sa fiabilité et sa compatibilité avec tous types de smartphones Android et iOS.<br><br>
-            <strong>C’était un véritable honneur de recevoir ce type de demande et de pouvoir développer mes compétences en programmation grâce à Flutter lors de la réalisation de ce projet.</strong>
+            WonderTech Scan est une application mobile que j'ai développée pour faciliter et accélérer la lecture des codes-barres, avec une fonctionnalité de gestion de stock intégrée. Elle permet à tout utilisateur de scanner rapidement des codes-barres ou QR codes, tout en assurant un suivi efficace des stocks. Elle se distingue par sa rapidité, sa fiabilité et sa compatibilité avec tous les smartphones Android et iOS.<br><br>
+            <strong>Un véritable honneur de recevoir ce type de demande et de développer mes compétences en programmation avec Flutter lors de la réalisation de ce projet.</strong>
           </p>
-          <button class="voir-plus-btn glow-btn" id="voirPlusProjetBtn">Voir plus</button>
-          <div class="project-fonctionnalites fade-in" id="fonctionnalitesProjet" style="display:none;">
-            <div class="app-screenshot-flex card-animate">
-              <img src="homeS.jpg" alt="Capture d’écran de l’accueil Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" loading="lazy" />
+          <button class="btn voir-plus-btn" data-toggle="fonctionnalitesProjet" data-label-more="Voir les fonctionnalités" data-label-less="Réduire">Voir les fonctionnalités</button>
+          <div class="project-fonctionnalites" id="fonctionnalitesProjet">
+            <div class="app-screenshot-flex reveal">
+              <img src="homeS.jpg" alt="Écran d'accueil WonderTech-Scanner" class="app-screenshot-img-mixed" loading="lazy" />
               <div class="app-screenshot-desc-mixed">
-                <div class="app-screenshot-caption-mixed">Écran d’accueil de l’application Wondertech-Scanner</div>
-                Dès l’ouverture de l’application, vous accédez à un écran d’accueil moderne et intuitif, présentant quatre boutons principaux :<br><br>
-                <strong>Scanner</strong> : Permet d’ajouter un nouveau document ou d’importer un document existant à scanner.<br>
-                <strong>Stock</strong> : Accédez à la liste des documents dans lesquels les codes-barres ont été scannés.<br>
-                <strong>Paramètres</strong> : Personnalisez les réglages de l’application selon vos préférences.<br>
-                <strong>Documents Validés</strong> : Retrouvez tous les documents qui ont été validés à partir du stock.<br><br>
-                Cette interface simple et épurée facilite la navigation et l’accès rapide à toutes les fonctionnalités essentielles de Wondertech-Scanner.
+                <div class="app-screenshot-caption-mixed">Écran d'accueil</div>
+                Dès l'ouverture, un écran d'accueil moderne présente quatre boutons principaux :<br><br>
+                <strong>Scanner</strong> : ajouter un nouveau document ou importer un document existant.<br>
+                <strong>Stock</strong> : accéder à la liste des documents dont les codes-barres ont été scannés.<br>
+                <strong>Paramètres</strong> : personnaliser les réglages de l'application.<br>
+                <strong>Documents Validés</strong> : retrouver tous les documents validés à partir du stock.
               </div>
             </div>
-            <div class="app-screenshot-flex card-animate">
-              <img src="option.jpg" alt="Choisir une option Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" loading="lazy" />
+            <div class="app-screenshot-flex reveal">
+              <img src="option.jpg" alt="Choisir une option WonderTech-Scanner" class="app-screenshot-img-mixed" loading="lazy" />
               <div class="app-screenshot-desc-mixed">
                 <div class="app-screenshot-caption-mixed">Choisir une option pour le document</div>
-                Sur cette page, l’utilisateur choisit entre deux actions principales :<br><br>
-                <strong>Importer un Document</strong> : Permet d’importer un document existant, soit depuis la page Stock, soit à partir d’un fichier externe au format XLS ou CSV.<br>
-                <strong>Créer un Nouveau Document</strong> : Permet de démarrer la création d’un nouveau document. En sélectionnant cette option, l’utilisateur est guidé vers l’étape suivante du processus.<br><br>
-                Cette étape facilite la gestion flexible des documents, que ce soit pour intégrer des données existantes ou pour en créer de nouvelles directement dans l’application.
+                L'utilisateur choisit entre deux actions :<br><br>
+                <strong>Importer un Document</strong> : depuis la page Stock ou un fichier XLS/CSV externe.<br>
+                <strong>Créer un Nouveau Document</strong> : démarrer la création d'un nouveau document, avec un guidage vers l'étape suivante.
               </div>
             </div>
-            <div class="app-screenshot-flex card-animate">
-              <img src="info.jpg" alt="Informations document Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" loading="lazy" />
+            <div class="app-screenshot-flex reveal">
+              <img src="info.jpg" alt="Informations document WonderTech-Scanner" class="app-screenshot-img-mixed" loading="lazy" />
               <div class="app-screenshot-desc-mixed">
-                <div class="app-screenshot-caption-mixed">Saisie des informations du document</div>
-                Sur cet écran, l’utilisateur (ou l’agent chargé du scan) renseigne son nom et le lieu où les codes-barres sont scannés.<br><br>
-                <strong>Numéro du Document</strong> : Généré automatiquement selon la séquence des documents déjà créés (exemple : DOC-20250709-006).<br>
-                <strong>Date</strong> : Récupérée automatiquement par l’application.<br><br>
-                Cette étape garantit la traçabilité de chaque opération de scan, en associant chaque document à un agent, un lieu, un numéro unique et une date précise.
+                <div class="app-screenshot-caption-mixed">Saisie des informations</div>
+                L'agent renseigne son nom et le lieu de scan.<br><br>
+                <strong>Numéro du Document</strong> : généré automatiquement (ex : DOC-20250709-006).<br>
+                <strong>Date</strong> : récupérée automatiquement. Chaque opération est ainsi tracée : agent, lieu, numéro unique et date.
               </div>
             </div>
-            <div class="app-screenshot-flex card-animate">
-              <img src="scan1.jpg" alt="Page de scan Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" loading="lazy" />
+            <div class="app-screenshot-flex reveal">
+              <img src="scan1.jpg" alt="Page de scan WonderTech-Scanner" class="app-screenshot-img-mixed" loading="lazy" />
               <div class="app-screenshot-desc-mixed">
                 <div class="app-screenshot-caption-mixed">Page de scan des codes-barres</div>
-                Après validation de la création du document, l’utilisateur accède au cœur de l’application : la page de scan.<br><br>
-                Lors de la première utilisation, l’application demande l’autorisation d’accéder à la caméra et au stockage du téléphone pour permettre le scan des codes-barres.<br>
-                <strong>Fonctionnalités principales :</strong><br>
+                Le cœur de l'application. À la première utilisation, l'app demande l'accès caméra et stockage.<br><br>
                 • Scan fluide et rapide des codes-barres ou QR codes.<br>
-                • Possibilité d’activer ou de désactiver le flash pour s’adapter à la luminosité.<br>
-                • Les résultats scannés s’affichent instantanément sous la zone de scan.<br><br>
-                Cette interface garantit une expérience utilisateur optimale et efficace pour la gestion des documents scannés.
+                • Activation/désactivation du flash selon la luminosité.<br>
+                • Résultats affichés instantanément sous la zone de scan.
               </div>
             </div>
-            <div class="app-screenshot-flex card-animate">
-              <img src="scan2.jpg" alt="Résultat du scan et gestion des quantités Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" loading="lazy" />
+            <div class="app-screenshot-flex reveal">
+              <img src="scan2.jpg" alt="Gestion des quantités WonderTech-Scanner" class="app-screenshot-img-mixed" loading="lazy" />
               <div class="app-screenshot-desc-mixed">
-                <div class="app-screenshot-caption-mixed">Gestion des quantités après scan</div>
-                Sur cet écran, chaque code-barres scanné est automatiquement ajouté à la liste des résultats.<br><br>
-                • Si le même code est scanné plusieurs fois, la quantité correspondante s’incrémente automatiquement (+1 à chaque scan).<br>
-                • L’utilisateur peut également ajuster la quantité manuellement à l’aide des boutons « + » et « – », ou en cliquant sur le nombre pour saisir la quantité souhaitée.<br><br>
-                Cette fonctionnalité permet un suivi précis et rapide des stocks lors de l’inventaire ou de la gestion des entrées/sorties.
+                <div class="app-screenshot-caption-mixed">Gestion des quantités</div>
+                Chaque code scanné est ajouté à la liste.<br><br>
+                • Un même code re-scanné incrémente automatiquement sa quantité (+1).<br>
+                • Ajustement manuel via les boutons « + » / « – » ou saisie directe. Suivi précis et rapide des stocks.
               </div>
             </div>
-            <div class="app-screenshot-flex card-animate">
-              <img src="scan3.jpg" alt="Saisie manuelle ou PDA Wondertech-Scanner" class="app-screenshot-img-mixed animated-icon" loading="lazy" />
+            <div class="app-screenshot-flex reveal">
+              <img src="scan3.jpg" alt="Saisie manuelle ou PDA WonderTech-Scanner" class="app-screenshot-img-mixed" loading="lazy" />
               <div class="app-screenshot-desc-mixed">
                 <div class="app-screenshot-caption-mixed">Saisie manuelle ou via PDA</div>
-                L’application offre une grande flexibilité pour la saisie des codes-barres :<br><br>
-                • L’utilisateur peut saisir manuellement un code-barres dans le champ prévu à cet effet.<br>
-                • Il est également possible d’utiliser un appareil PDA pour scanner les codes plus rapidement.<br>
-                • Un bouton « Accueil » permet de revenir facilement à la page principale à tout moment.<br><br>
-                Tous les codes scannés ou saisis sont enregistrés en temps réel dans la page Stock, sous le nom du document en cours.<br>
-                Cette diversité d’options garantit une expérience adaptée à tous les contextes d’utilisation et une sauvegarde instantanée des données.
+                Grande flexibilité de saisie :<br><br>
+                • Saisie manuelle d'un code dans le champ dédié.<br>
+                • Utilisation d'un appareil PDA pour scanner plus vite.<br>
+                • Bouton « Accueil » pour revenir à tout moment. Tous les codes sont enregistrés en temps réel dans le Stock.
               </div>
             </div>
           </div>
@@ -142,20 +315,37 @@
       </div>
     </section>
   </main>
-  <footer class="contact-footer footer-gradient">
-    <div class="contact-text">Vous pouvez me contacter</div>
-    <div class="contact-icons">
-      <a href="mailto:bouaziznidhal22@gmail.com" class="icon-btn animated-icon" aria-label="Gmail">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#EA4335"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" fill="#fff"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" fill="#fff"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" stroke="#EA4335" stroke-width="2"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" stroke="#EA4335" stroke-width="2"/></svg>
-      </a>
-      <a href="https://wa.me/21646298360" target="_blank" rel="noopener noreferrer" class="icon-btn animated-icon" aria-label="WhatsApp">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#25D366"/><path d="M16 10.5A5.5 5.5 0 0 0 10.5 16c0 1.01.27 1.96.74 2.77l-1.01 2.94 3.01-1.01A5.5 5.5 0 1 0 16 10.5Zm0 9.5a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm2.12-3.12-.88-.26c-.24-.07-.41-.13-.58.13l-.25.34c-.13.18-.25.18-.46.06a3.2 3.2 0 0 1-1.5-1.5c-.12-.21-.12-.33.06-.46l.34-.25c.26-.17.2-.34.13-.58l-.26-.88c-.07-.24-.18-.21-.3-.21h-.25c-.14 0-.34.05-.52.23-.18.18-.7.68-.7 1.65 0 .97.7 1.91.8 2.05.1.14 1.37 2.18 3.34 2.18 1.97 0 2.8-1.25 2.9-1.39.1-.14.29-.2.41-.14.12.06.29.12.45.18.16.06.27.09.38-.06.11-.15.44-.43.44-.84 0-.41-.44-.63-.6-.7Z" fill="white"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/nidhal-bouaziz-67460b377/" target="_blank" rel="noopener noreferrer" class="icon-btn animated-icon" aria-label="LinkedIn">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#0A66C2"/><path d="M12 14h2v8h-2v-8Zm1-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm3 4h2v1.1c.28-.5 1-1.1 2.1-1.1C21.6 14 23 15.1 23 17.5V22h-2v-4c0-1-.5-1.5-1.3-1.5-.8 0-1.2.5-1.2 1.5v4h-2v-8Z" fill="white"/></svg>
-      </a>
+
+  <footer class="site-footer reveal">
+    <div class="footer-cta">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2>Une idée de projet&nbsp;? <span class="grad-text">Donnons-lui vie</span></h2>
+        <p>Du concept au déploiement — web, mobile ou full-stack. Discutons de votre besoin.</p>
+      </div>
+      <div class="contact-icons">
+        <a href="mailto:bouaziznidhal22@gmail.com" class="icon-btn" aria-label="Gmail">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#EA4335"/><path d="M8 12.5V20a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5v-7.5l-8 5-8-5Z" fill="#fff"/><path d="M24 10.5V12l-8 5-8-5v-1.5A1.5 1.5 0 0 1 9.5 9h13A1.5 1.5 0 0 1 24 10.5Z" fill="#fff"/></svg>
+        </a>
+        <a href="https://wa.me/21646298360" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="WhatsApp">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#25D366"/><path d="M16 10.5A5.5 5.5 0 0 0 10.5 16c0 1.01.27 1.96.74 2.77l-1.01 2.94 3.01-1.01A5.5 5.5 0 1 0 16 10.5Zm0 9.5a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm2.12-3.12-.88-.26c-.24-.07-.41-.13-.58.13l-.25.34c-.13.18-.25.18-.46.06a3.2 3.2 0 0 1-1.5-1.5c-.12-.21-.12-.33.06-.46l.34-.25c.26-.17.2-.34.13-.58l-.26-.88c-.07-.24-.18-.21-.3-.21h-.25c-.14 0-.34.05-.52.23-.18.18-.7.68-.7 1.65 0 .97.7 1.91.8 2.05.1.14 1.37 2.18 3.34 2.18 1.97 0 2.8-1.25 2.9-1.39.1-.14.29-.2.41-.14.12.06.29.12.45.18.16.06.27.09.38-.06.11-.15.44-.43.44-.84 0-.41-.44-.63-.6-.7Z" fill="#fff"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/nidhal-bouaziz-67460b377/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" fill="#0A66C2"/><path d="M12 14h2v8h-2v-8Zm1-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm3 4h2v1.1c.28-.5 1-1.1 2.1-1.1C21.6 14 23 15.1 23 17.5V22h-2v-4c0-1-.5-1.5-1.3-1.5-.8 0-1.2.5-1.2 1.5v4h-2v-8Z" fill="#fff"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Nidhal Bouaziz — Sfax, Tunisie</span>
+      <nav class="footer-nav" aria-label="Navigation pied de page">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="experience.html">Expérience</a>
+        <a href="projets.html">Projets</a>
+        <a href="competences.html">Compétences</a>
+      </nav>
     </div>
   </footer>
   <script src="site.js" defer></script>
- </body>
- </html>
+</body>
+</html>

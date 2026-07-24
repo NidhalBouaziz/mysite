@@ -1,20 +1,32 @@
 {
   "name": "Nidhal Bouaziz — Portfolio",
-  "short_name": "Nidhal",
+  "short_name": "Nidhal B.",
+  "description": "Portfolio de Nidhal Bouaziz — développeur web & mobile et Ethical Hacker.",
   "start_url": "index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2563eb",
+  "background_color": "#060915",
+  "theme_color": "#060915",
+  "lang": "fr",
+  "categories": ["portfolio", "technology", "productivity"],
   "icons": [
     {
-      "src": "logotech.jpg",
+      "src": "icons/icon-192.png",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "homeS.jpg",
+      "src": "icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ]
 }
