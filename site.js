@@ -229,7 +229,7 @@
     }, { threshold: 0.16, rootMargin: '0px 0px -40px 0px' });
 
     revealEls.forEach(function (el) { io.observe(el); });
-    counters.forEach(function (el) { io.observe(el); });
+    counters.forEach(function (el) { el.textContent = '0'; io.observe(el); });
     bars.forEach(function (el) { io.observe(el); });
   }
 

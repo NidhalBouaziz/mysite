@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: sitemap.xml
+Sitemap: https://nidhalbouaziz.github.io/mysite/sitemap.xml
 
 # If you want to block crawlers from staging or dev paths, add Disallow lines here.
